@@ -1,0 +1,9 @@
+resource "aws_route_table_association" "simon_rtas_a" {
+  subnet_id = aws_subnet.simon_puba.id
+  route_table_id = aws_route_table.simon_rt.id
+}
+
+resource "aws_route_table_association" "simon_rtas_c" {
+  subnet_id = aws_subnet.simon_pubc.id
+  route_table_id = aws_route_table.simon_rt.id
+}

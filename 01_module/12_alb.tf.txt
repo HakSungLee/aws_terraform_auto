@@ -1,0 +1,12 @@
+# Application LoadBalancer Deploy
+resource "aws_lb" "simon_lb" {
+  name                   = "simon-alb"
+  internal               = false
+  load_balancer_type     = "application"
+  security_groups        =  [aws_security_group.simon_websg.id]
+  subnets                =  [aws_subnet.simon_puba.id,aws_subnet.simon_pubc.id]
+  
+  tags = {
+    Name  = "simon-alb"
+  }
+}

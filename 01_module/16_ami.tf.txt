@@ -1,0 +1,7 @@
+resource "aws_ami_from_instance" "simon_ami" {
+  name                    = "simon-ami"
+  source_instance_id      = aws_instance.simon_weba.id
+  depends_on = [
+    aws_instance.simon_weba
+  ]
+}

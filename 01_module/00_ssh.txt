@@ -1,0 +1,4 @@
+resource "aws_key_pair" "simon_key" {
+  key_name        ="simon-key"
+  public_key      = file("C:\Users\user\.ssh/id_rsa.pub")  
+}

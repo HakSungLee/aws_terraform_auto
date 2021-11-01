@@ -1,0 +1,5 @@
+resource "aws_lb_target_group_attachment" "simon_lbtg_att" {
+  target_group_arn      = aws_lb_target_group.simon_lbtg.arn
+  target_id             = aws_instance.simon_weba.id
+  port                  = 80 
+}

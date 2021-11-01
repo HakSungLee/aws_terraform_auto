@@ -1,0 +1,7 @@
+resource "aws_internet_gateway" "simon_ig" {
+  vpc_id = aws_vpc.simon_vpc.id
+
+  tags = {
+    Name = "simon-ig"
+  }
+}
